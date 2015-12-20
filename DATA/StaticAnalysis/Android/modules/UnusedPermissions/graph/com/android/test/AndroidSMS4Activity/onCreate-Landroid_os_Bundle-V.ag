@@ -1,0 +1,25 @@
+# Lcom/android/test/AndroidSMS4Activity;->onCreate(Landroid/os/Bundle;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v6
+# - v7:android.os.Bundle
+#
+# - return:void
+
+onCreate-BB@0x0 : 
+	0       (00000000) const/4              v2, 0
+	1       (00000002) invoke-super         v6, v7, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
+	2       (00000008) const/high16         v1, 32515 # [1.7412886744782398e+38]
+	3       (0000000c) invoke-virtual       v6, v1, Lcom/android/test/AndroidSMS4Activity;->setContentView(I)V
+	4       (00000012) const-string         v1, '12345678912'
+	5       (00000016) const-string         v3, 'hello'
+	6       (0000001a) invoke-virtual       v6, v1, v3, Lcom/android/test/AndroidSMS4Activity;->sendSMS(Ljava/lang/String; Ljava/lang/String;)V
+	7       (00000020) invoke-static        Landroid/telephony/SmsManager;->getDefault()Landroid/telephony/SmsManager;
+	8       (00000026) move-result-object   v0
+	9       (00000028) const-string         v1, '12345678912'
+	10      (0000002c) const-string         v3, 'test'
+	11      (00000030) move-object          v4, v2
+	12      (00000032) move-object          v5, v2
+	13      (00000034) invoke-virtual/range v0 ... v5, Landroid/telephony/SmsManager;->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V
+	14      (0000003a) return-void          
+

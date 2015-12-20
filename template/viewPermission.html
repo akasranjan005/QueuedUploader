@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Web App</title>
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<blockquote>
+  <p>ReverseAndro</p>
+  <small>By <cite title="Akash">Akash Ranjan</cite></small>
+</blockquote>
+	<div class="container">
+	<div class="panel panel-default custom_ak">
+	<form action="/uploadSuccess/" method="POST">
+  		<div class="panel-heading">Permissions--</div>
+  		<div class="panel-body">
+  		The foollowing permissions were required by the app:
+  		{% for apkPermission in apkPermissions %}
+  		<p>
+  			<br>
+  			{{apkPermission.apkName}}
+  			&nbsp&nbsp&nbsp
+  			{{apkPermission.apkPermission}}
+  		</p>
+  		{% endfor %}
+  		</div>
+  	</form>
+	</div>
+	</div>
+</body>
+</html>

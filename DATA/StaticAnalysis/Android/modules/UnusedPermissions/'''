@@ -1,0 +1,15 @@
+'''
+Script for Strtup GRIND
+'''
+
+from BeautifulSoup import BeautifulSoup
+import reqeusts
+
+r = requests.get("http://startupgrind.com/2015/")
+
+data = r.text
+
+soup = BeautifulSoup(data)
+
+for link in soup.findall('section'):
+	print link.get('id') 
