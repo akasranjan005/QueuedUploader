@@ -3,14 +3,14 @@ This web app can be used wherever there is a requirement of uploading multiple f
 
 Documentation:
 
-##1. This project contains 3 apps
+## 1. This project contains 3 apps
     andro(for androguard)
     django_rq(for redis queue)
     home(for home/index page)
 
-##2. to up and run this project:
+## 2. to up and run this project:
 	
-###As this project has been built on ubuntu, so a flavour of linux will be required or webserver can do.
+As this project has been built on ubuntu, so a flavour of linux will be required or webserver can do.
 we will need 2 terminal to fully run this project
 change the location to the working directory, i.e. where the project is kept,
 then type the following commands
@@ -20,11 +20,11 @@ then type the following commands
     python manage.py syncdb
     python manage.py runserver
 		
-##On the other Terminal type:
+## On the other Terminal type:
 
     python manage.py rqworker default
 
-##Now we are ready to Run the project
+## Now we are ready to Run the project
 	
     Open a browser and type
     127.0.0.1:8000/home/
